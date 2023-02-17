@@ -30,7 +30,10 @@ export const createVendor = async (req: Request, res: Response) => {
 
         return res.status(201).json({ message: "Vendor has been added successfully!" });
     } catch (err) {
-        return res.status(422).json({ message: `Error parsing form data: ${err}` });
+        return res.status(422).json({
+            error: true,
+            message: `${err}`
+        });
     }
 }
 
