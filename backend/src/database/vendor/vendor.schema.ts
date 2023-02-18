@@ -1,12 +1,8 @@
 import * as Mongoose from "mongoose";
-import moment from 'moment';
 
 const VendorSchema = new Mongoose.Schema({
     name: String,
-    date: {
-        type: String,
-        default: moment(new Date()).format('YYYY-MM-DD')
-    },
+    date: String,
     purchaseOrders: [{
         type: Mongoose.Schema.Types.ObjectId,
         ref: "PurchaseOrder",

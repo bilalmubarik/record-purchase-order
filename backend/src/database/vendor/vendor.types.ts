@@ -2,7 +2,7 @@ import { Document, Model } from "mongoose";
 
 export interface IVendor {
     name: String;
-    date: Date;
+    date: String;
 }
 
 export interface IVendorDocument extends IVendor, Document { }

@@ -52,7 +52,7 @@ export default {
 				formData.append('name', name.value)
 				formData.append('date', date.value)
 				formData.append('csv', file.value)
-				const response = await axios.post('http://127.0.0.1:8080/v1/vendor', formData, {
+				const response = await axios.post('https://record-purchase-order-app.herokuapp.com/v1/vendor', formData, {
 					headers: {
 						'Content-Type': 'multipart/form-data'
 					}
